@@ -1,0 +1,76 @@
+@import './variables.scss';
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    .navbarContainer{
+      display: flex;
+      align-items: center;
+      padding: 0 50px;
+      height: 100%;
+      color: white;
+      font-family: 'Sen',sans-serif;
+      
+        .logoContainer{
+          flex: 1;
+          .logo{
+            font-size: 30px;
+            color: $base-color;
+          }
+        }
+        .menuContainer{
+          flex: 6;
+          .menuList{
+            display: flex;
+            .menuListItem{
+              margin-right: 30px;
+              &.active{
+                font-weight: bold;
+              }
+            }
+          }
+        }
+        .profileContainer{
+          flex: 2;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          .profilePicture{
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .profileTextContainer{
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+          }
+          .darkModeToggle{
+            width: 40px;
+            height: 20px;
+            background-color: white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            .toggleIcon{
+              color: goldenrod;
+              margin: 3px;
+            }
+            .toggleBall{
+              width: 18px;
+              height: 18px;
+              background-color: black;
+              position: absolute;
+              right: 1px;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: .3s ease-in-out;
+            }
+          }
+        }
+    }
+  }

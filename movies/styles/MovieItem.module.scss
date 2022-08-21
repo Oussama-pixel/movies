@@ -1,0 +1,59 @@
+@import "./variables.scss";
+.movieListItem{
+    margin-right: 30px;
+    position: relative;
+    .movieListItemImg{
+      object-fit: cover;
+      transition: all .3s ease-in-out;
+      border-radius: 10px;
+    }
+    .movieListItemTitle{
+      opacity: 0;
+      transition: .4s ease-in-out;
+      background-color: #333;
+      padding: 0 10px;
+      font-size: 32px;
+      font-weight: bold;
+      position: absolute;
+      top: 10%;
+      left: 50px;
+      
+    }
+    .movieListItemDesc{
+      opacity: 0;
+      transition: .4s ease-in-out;
+      background-color: #333;
+      padding: 10px;
+      font-size: 14px;
+      position: absolute;
+      top: 25%;
+      left: 50px;
+      width: 80%;
+      
+    }
+    .movieListItemButton{
+      opacity: 0;
+      transition: .4s ease-in-out;
+      padding: 10px;
+      width: 140px;
+      font-size: 20px;
+      background-color: $base-color;
+      color: white;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      bottom: 40px;
+      left: 50px;
+    }
+    &:hover{
+      .movieListItemImg{
+        transform: scale(1.2);
+        opacity: .5;
+      }
+      .movieListItemTitle,.movieListItemDesc,.movieListItemButton{
+        opacity: 1;
+      }
+    }
+  }

@@ -1,0 +1,29 @@
+.movieListContainer{
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+    .moviesListWrapper{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      .arrow{
+        font-size:  100px;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        color: lightgray;
+        opacity: 0.5;
+        cursor: pointer;
+        z-index: 2;
+        &.left{
+            left: 0;
+        }
+      }
+      .movieList{
+        display: flex;
+        align-items: center;
+        height: 300px;
+        transition: .4s ease-in-out;
+      }
+    }
+  }
